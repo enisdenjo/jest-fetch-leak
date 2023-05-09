@@ -1,0 +1,9 @@
+{
+  "name": "jest-fetch-leak",
+  "scripts": {
+    "test": "jest --detectLeaks"
+  },
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
