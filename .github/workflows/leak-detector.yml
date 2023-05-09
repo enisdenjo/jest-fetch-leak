@@ -11,6 +11,7 @@ jobs:
         ports:
           - 58080:80
     strategy:
+      fail-fast: false
       matrix:
         version: [18, 19, 20]
     runs-on: ubuntu-latest
