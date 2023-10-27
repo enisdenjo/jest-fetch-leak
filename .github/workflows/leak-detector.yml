@@ -14,9 +14,9 @@ jobs:
       fail-fast: false
       matrix:
         version: [18, 20, 21]
-        iterations: [100, 300]
+        type: ["cjs", "esm"]
     runs-on: ubuntu-latest
-    name: Test on Node v${{ matrix.version }} with ${{ matrix.iterations }} iterations
+    name: Test on Node v${{ matrix.version }} with ${{ matrix.type }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -27,6 +27,4 @@ jobs:
       - name: Install
         run: npm i
       - name: Test
-        env:
-          ITERATIONS: ${{ matrix.iterations }}
-        run: npm test
+        run: npm run test:${{ matrix.type }}
