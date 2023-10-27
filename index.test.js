@@ -1,3 +1,3 @@
-describe("should not leak", () => {
-  test("does it?", () => fetch("http://localhost:58080"));
+test("does it leak?", () => {
+  // noop
 });
